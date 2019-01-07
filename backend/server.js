@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost:27017/issues');
-// let issue = new Issue({title:'hala', responsible: 'wtf', description: 'wtf' });
+// let issue = new Issue({title:'second', responsible: 'wtf', description: 'wtf', severity: 'medium' });
 // issue.save();
 const connection = mongoose.connection;
 
@@ -71,7 +71,7 @@ router.route('/issues/update/:id').post((req, res) => {
     });
 });
 
-router.route('/issue/delete/:id').get((req, res) => {
+router.route('/issues/delete/:id').get((req, res) => {
     Issue.findByIdAndRemove({_id: req.params.id}, (err, issue) => {
         if(err)
             res.json(err);
