@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost:27017/issues');
-// let issue = new Issue({title:'second', responsible: 'wtf', description: 'wtf', severity: 'medium' });
+// let issue = new Issue({title:'second', responsible: 'resp', description: 'desc', severity: 'medium' });
 // issue.save();
 const connection = mongoose.connection;
 
