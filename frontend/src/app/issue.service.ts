@@ -29,7 +29,7 @@ uri = 'http://localhost:3000';
     return this.http.post(`${this.uri}/issues/add`, issue);
   }
 
-  updateIssue(id, title, responsible, description, severity) {
+  updateIssue(id, title, responsible, description, severity, status) {
     let issue = {
       title: title,
       responsible: responsible,
